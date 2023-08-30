@@ -1,4 +1,4 @@
-# paper place
+# marp slides
 
 - marpでスライドを作成する環境
 
