@@ -1,0 +1,14 @@
+# material
+univ-logo*
+lab-logo*
+
+# private
+private/
+
+# my
+out/
+.DS_Store
+.env
+.env.prod
+node_modules/
+*.vsix

@@ -1,0 +1,206 @@
+/*
+ * @theme lab
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ */
+
+/* https://github.com/marp-team/marp-core/blob/main/themes/gaia.scss */
+@import 'gaia';
+
+:root {
+    font-size: 32px;
+    padding: 48px;
+    --color-background: #f0f0f0;
+    --color-foreground: #e0e0e0;
+    --color-font: #444;
+    --color-font-dim: #888;
+    --color-font-light: #ffffff;
+    --color-font-code: #bbddff;
+    --color-font-highlight: #ffddbb;
+    --color-code: #24283b;
+    --color-line: #666;
+}
+
+section {
+    background-color: var(--color-background);
+    background-image: url(../../theme/lab-logo.png);
+    background-size: 250px;
+    background-position: right 30px top 30px;
+    background-repeat: no-repeat;
+    color: #333;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+section.title {
+    background-color: var(--color-background);
+    background-image: url(../../theme/lab-logo.png), url(../../theme/univ-logo-horizontal.png);
+    background-size: 350px, 350px;
+    background-position: right 140px top 310px, right 140px top 475px;
+    background-repeat: no-repeat;
+    color: #333;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 32px;
+}
+
+section.title h1 {
+    font-size: 2.0rem;
+    padding: 50px 0px 10px 50px;
+}
+
+section.title p {
+    font-size: 1rem;
+    padding-left: 50px;
+}
+
+section p {
+    padding-left: 25px;
+}
+
+section li p {
+    padding-left: 0px;
+}
+
+section ul {
+    padding-left: 50px;
+}
+
+section ul li {
+    padding-left: 5px;
+}
+
+section ol {
+    padding-left: 65px;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 20px 0px 10px 20px;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    padding: 20px 0px 10px 20px;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    /* border-bottom: 0.05em solid var(--color-font-light); */
+    padding: 20px 0px 10px 20px;
+    margin: 0px;
+}
+
+
+/* ``で囲ってハイライトされるやつ */
+code {
+    background-color: var(--color-foreground);
+    color: var(--color-font);
+    padding: 5px 10px;
+    border-radius: 0.3em;
+}
+
+/* code block */
+/* preとcodeの両方で指定する */
+/* preとpre>codeで色を変えてみれば挙動がわかるはず */
+pre {
+    background-color: var(--color-code);
+    border-radius: .3rem;
+}
+
+/* codeの文字の部分 */
+pre>code {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--color-font-code);
+    background-color: var(--color-code);
+    padding: 20px;
+    margin: 30px 10px;
+    font-size: 0.8em;
+    letter-spacing: 0;
+}
+
+/* > ブロック */
+blockquote {
+    width: 1050px;
+    border-top: 0.1em solid var(--color-line);
+    color: var(--color-font-dim);
+    font-size: 0.6em;
+    position: absolute;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+blockquote p {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+blockquote::before {
+    content: "";
+}
+
+blockquote::after {
+    content: "";
+}
+
+/* pagenate */
+section::after {
+    font-size: 0.5em;
+    color: var(--color-font-dim);
+    /* content: 'Page 'attr(data-marpit-pagination) ' / 'attr(data-marpit-pagination-total); */
+    content: attr(data-marpit-pagination);
+    height: 60px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+/* header, footer */
+header,
+footer {
+    position: absolute;
+    color: var(--color-font-dim);
+    font-size: 0.6rem;
+    /* heightはheader, footerの位置に影響する */
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    left: 70px;
+    top: 25px;
+}
+
+footer {
+    text-align: center;
+    bottom: 0px;
+}
+
+
+/* 1行目 */
+table thead th {
+    background-color: var(--color-code);
+    color: var(--color-font-light);
+    font-weight: 100
+}
+
+/* table border */
+table th, table td {
+    border-color: var(--color-line);
+    /* セルの大きさ */
+    padding: 5px 30px
+}
+
+/* 行全体 */
+table td {
+    background-color: var(--color-background);
+}
+
+/* 奇数番目 */
+table tbody tr:nth-child(odd) {
+    background-color: var(--color-foreground);
+}
