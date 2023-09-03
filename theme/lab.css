@@ -10,7 +10,8 @@
 :root {
     font-size: 32px;
     padding: 48px;
-    --color-background: #f0f0f0;
+    /* --color-background: #f0f0f0; */
+    --color-background: #ffffff;
     --color-foreground: #e0e0e0;
     --color-font: #444;
     --color-font-dim: #888;
@@ -203,4 +204,31 @@ table td {
 /* 奇数番目 */
 table tbody tr:nth-child(odd) {
     background-color: var(--color-foreground);
+}
+
+.two {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.two>.left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.two>.right {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.vcenter {
+    display: flex;
+    /* 縦方向に配置するためにカラム（列）方向に設定 */
+    flex-direction: column;
+    /* 縦方向に中央寄せにする */
+    align-items: center;
+    /* 横方向にも中央寄せにする（オプション） */
+    justify-content: center;
 }

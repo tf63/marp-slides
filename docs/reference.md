@@ -31,3 +31,6 @@ https://github.com/marp-team/marp-core/blob/main/themes/default.scss
 https://iroiroyaru.netlify.app/2021-05-14_marp/
 
 https://zenn.dev/hellorusk/articles/4edf3920dd1a35
+
+### katex
+https://katex.org/docs/supported.html

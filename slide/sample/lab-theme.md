@@ -56,6 +56,11 @@ p tag
 2. number 2
 3. number 3
 
+### img
+
+![Alt text](img/lab-theme.png)
+
+
 ### blockquote
 - google$^{[1]}$
 - yahoo$^{[2]}$
@@ -63,26 +68,80 @@ p tag
 > [1] https://google.com, [2] https://yahoo.co.jp
 
 
-### invert
-<!-- class: invert -->
-
-
 ### math
 
-$\int_a^b f(x) dx$
+インライン数式 $f(x) = x^2$, $\int_a^b f(x) dx$
 
 $$ 
 \text {d} x = f(t) x \text {d}t + g(t) \text {d}w 
 $$
 $$ 
-\text {d} x = f(t) x \text {d}t + g(t) \text {d}w 
+F(\omega ) = \frac 1 {\sqrt {2\pi} }\int_{-\infty}^\infty f(t) e^{-j\omega t}dt
 $$
-$$ 
-\text {d} x = f(t) x \text {d}t + g(t) \text {d}w 
 $$
-$$ 
-\text {d} x = f(t) x \text {d}t + g(t) \text {d}w 
+\bm a = 
+    \begin{pmatrix}
+        a_1\\
+        a_2
+    \end{pmatrix}
+, \quad
+
+A = 
+\begin{pmatrix}
+   a & b \\
+   c & d
+\end{pmatrix}
+\quad
+x = \begin{cases}
+   a &\text{if } b \\
+   c &\text{if } d
+\end{cases}
 $$
+
+### two columns
+<div class="two">
+    <div class="left">
+        <p><b>左カラム</b></p>
+        <p>左カラムのコンテンツがここに入ります。</p>
+        <img src="img/lab-theme.png" width=200px style="padding: 25px;"><img src="img/lab-theme.png" width=200px style="padding: 25px;">
+    </div>
+    <div class="right">
+        <p><b>右カラム</b></p>
+        <p>右カラムのコンテンツがここに入ります。</p>
+    </div>
+</div>
+
+### two columns
+<br />
+<br />
+
+<div class="two">
+<div class="left">
+
+$$
+    \text d \bm x = f (\bm x, t) dt + g(t) \text d \bm w
+$$
+
+<br>
+
+$$
+    \text d \bm x = - \frac 1 2 \beta(t) \bm x \text d t + \sqrt{\beta(t)} \text d \bm w
+$$
+
+</div>
+<div class="right">
+
+$$
+    f(\bm x, t) = - \frac 1 2 \beta (t) \bm x
+$$
+
+$$
+    g(t) = \sqrt{\beta(t)}
+$$
+
+</div>
+</div>
+
 ### code
 ```
 # this is comment
@@ -93,8 +152,8 @@ if __name__ == "__main__":
     main()
 
 ```
-### table
 
+### table
 
 |11|00|00|
 |:----|:----:|----:|
