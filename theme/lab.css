@@ -10,15 +10,15 @@
 :root {
     font-size: 32px;
     padding: 48px;
-    /* --color-background: #f0f0f0; */
     --color-background: #ffffff;
-    --color-foreground: #e0e0e0;
-    --color-font: #444;
+    --color-foreground: #f4f4f4;
+    --color-font: #505050;
     --color-font-dim: #888;
     --color-font-light: #ffffff;
     --color-font-code: #bbddff;
-    --color-font-highlight: #ffddbb;
-    --color-code: #24283b;
+    --color-font-highlight: #4772a6;
+    --color-dim: #e4e4e4;
+    --color-code: #2b3252;
     --color-line: #666;
 }
 
@@ -28,7 +28,7 @@ section {
     background-size: 250px;
     background-position: right 30px top 30px;
     background-repeat: no-repeat;
-    color: #333;
+    color: var(--color-font);
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -38,13 +38,12 @@ section.title {
     background-size: 350px, 350px;
     background-position: right 140px top 310px, right 140px top 475px;
     background-repeat: no-repeat;
-    color: #333;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 32px;
 }
 
 section.title h1 {
-    font-size: 2.0rem;
+    font-size: 1.75rem;
     padding: 50px 0px 10px 50px;
 }
 
@@ -73,22 +72,39 @@ section ol {
     padding-left: 65px;
 }
 
-h1 {
-    font-size: 2rem;
-    padding: 20px 0px 10px 20px;
-    margin: 0px;
+section br {
+    display: block;
+    content: "";
+    margin: 0.5em 0;
+    padding: 0px;
 }
 
-h2 {
+h1 {
+    color: var(--color-font-highlight);
     font-size: 1.75rem;
     padding: 20px 0px 10px 20px;
     margin: 0px;
 }
 
-h3 {
+h2 {
+    color: var(--color-font-highlight);
     font-size: 1.5rem;
-    /* border-bottom: 0.05em solid var(--color-font-light); */
     padding: 20px 0px 10px 20px;
+    margin: 0px;
+}
+
+h3 {
+    color: var(--color-font-highlight);
+    font-size: 1.3rem;
+    /* border-bottom: 0.05em solid var(--color-font-light); */
+    padding: 20px 0px 0px 20px;
+    margin: 0px;
+}
+
+h4 {
+    color: var(--color-font);
+    /* border-bottom: 0.05em solid var(--color-font-light); */
+    padding: 20px 0px 0px 20px;
     margin: 0px;
 }
 
@@ -198,13 +214,20 @@ table th, table td {
 
 /* 行全体 */
 table td {
-    background-color: var(--color-background);
+    background-color: var(--color-dim);
 }
 
 /* 奇数番目 */
-table tbody tr:nth-child(odd) {
+table tbody tr:nth-child(odd) td, table tbody tr:nth-child(odd) th {
     background-color: var(--color-foreground);
 }
+
+/* table tbody tr:nth-child(even) td, table tbody tr:nth-child(even) th {
+    background-color: var(--color-background);
+} */
+
+
+
 
 .two {
     display: flex;

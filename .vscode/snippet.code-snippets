@@ -15,4 +15,18 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"two_columns": {
+		"prefix": "two",
+		"body": [
+			"<div class=\"two\" style=\"padding-top: 0px\">", 
+			"<div class=\"left\" style=\"padding-top: 0px\">", 
+			"", 
+			"</div>", 
+			"<div class=\"right\" style=\"padding-top: 0px\">", 
+			"", 
+			"</div>", 
+			"</div>", 
+		],
+		"description": ""
+	}
 }
